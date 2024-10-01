@@ -1,23 +1,11 @@
-# from math import gcd
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-# a = int(input('enter a number: '))
-# b = int(input('enter a number: '))
-
-# x = gcd(a,b)
-
-# print(x)
-
-
-def x(a,b):
-    while b:
-        b,a % b
-        if b == 0:
-            return abs(a)  
-
-a = int(input('enter anumber : '))
-b = int(input('enter a number : '))
-
-
-
-result = x(a, b)
-print(result)
+#Функция шифрования по ключу
+#text - list символов текста
+#key - list с перестановкой на алфавите
+def encrypt(text, key):
+    result = []
+    for i in range(len(text)):
+        result.append(key[alphabet.index(text[i])])
+    print(result)
+    return result
